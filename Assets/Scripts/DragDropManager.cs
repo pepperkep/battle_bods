@@ -10,35 +10,44 @@ public class DragDropManager : MonoBehaviour
     private Vector2 mouseMove;
     [SerializeField] private float moveSpeed;
     [SerializeField] private bool isDraggable;
+    bool isGrabbed = false;
+    Vector2 pos;
     // Start is called before the first frame update
     void Start()
     {
        enemyPart = gameObject.GetComponent<Rigidbody>(); 
         
     }
-    public void Update()
+    void FixedUpdate()
     {
-       
-       
+        
+             pos = Camera.main.ScreenToViewportPoint(Mouse.current.position.ReadValue());
+            //Debug.Log(pos);
+            
+            
+            
+        
     }
-    //For when you click on the part the script is attached to
-    private void onGrabPart(InputAction.CallbackContext context){
+    
+    public void onGrabPart(InputAction.CallbackContext context){
         if(isDraggable){
+        isGrabbed = true;
         Debug.Log("Found enemy part!");
         originalPosition = transform.position;  
         Debug.Log(originalPosition);
         }
 
     }
-    //For dragging the part based on the change in location of the mouse
-    private void onDragPart(InputAction.CallbackContext context){
-    if(isDraggable){
+
+    public void onDragPart(InputAction.CallbackContext context){
+    if(isDraggable && isGrabbed){
     mouseMove = context.ReadValue<Vector2>();
-    enemyPart.MovePosition((enemyPart.position + ((Vector3)(mouseMove.x * Vector2.right * Time.fixedDeltaTime * moveSpeed))));
+    enemyPart.MovePosition((enemyPart.position + ((Vector3)(mouseMove))));
+    
     }
     }
-    //For making the part a child object of the player's body when it collides with the player's collider
-    private void OnCollisionEnter(Collision other) {
+
+    public void OnCollisionEnter(Collision other) {
          if (other.gameObject.name == "Bod"){
              this.gameObject.transform.parent = other.gameObject.transform;
          }
