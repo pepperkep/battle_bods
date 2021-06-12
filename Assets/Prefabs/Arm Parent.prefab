@@ -130,6 +130,18 @@ PrefabInstance:
       propertyPath: m_Name
       value: Arm
       objectReference: {fileID: 0}
+    - target: {fileID: 5899926076592174936, guid: 082b2da6decaa73449a1863bec94efe3, type: 3}
+      propertyPath: m_Size.y
+      value: 0.056822218
+      objectReference: {fileID: 0}
+    - target: {fileID: 5899926076592174936, guid: 082b2da6decaa73449a1863bec94efe3, type: 3}
+      propertyPath: m_Center.x
+      value: -0.19336152
+      objectReference: {fileID: 0}
+    - target: {fileID: 5899926076592174936, guid: 082b2da6decaa73449a1863bec94efe3, type: 3}
+      propertyPath: m_Center.y
+      value: 0.09579081
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 082b2da6decaa73449a1863bec94efe3, type: 3}
 --- !u!4 &4208146962233634102 stripped
