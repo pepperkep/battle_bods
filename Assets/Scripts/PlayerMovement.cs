@@ -9,11 +9,12 @@ public class PlayerMovement : MonoBehaviour
     [SerializeField] private float moveSpeed;
     private Rigidbody rb;
     private Vector2 nextMove;
-
+    public Animator animator;
 
     public void Move(InputAction.CallbackContext context)
     {
         nextMove = context.ReadValue<Vector2>();
+        animator.SetFloat("speed", Mathf.Abs(nextMove.x));
     }
 
     // Start is called before the first frame update
