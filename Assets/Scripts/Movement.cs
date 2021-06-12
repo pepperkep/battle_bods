@@ -7,7 +7,9 @@ public class Movement : MonoBehaviour
     protected Rigidbody rb;
     protected Animator animator;
     protected Vector2 nextMove;
-    public float errorAmount = 0.01f;
+    protected Vector2 velocity;
+    public Vector2 gravity = new Vector2(0, -9.8f);
+    public float errorAmount = 0.0001f;
     public float moveSpeed;
 
     // Start is called before the first frame update
@@ -23,15 +25,19 @@ public class Movement : MonoBehaviour
     {
         RaycastHit[] hits = new RaycastHit[128];
         Vector3 displacement = ((Vector3)(nextMove.x * Vector2.right * Time.fixedDeltaTime * moveSpeed));
+        this.velocity += gravity * Time.fixedDeltaTime;
+        displacement += (Vector3)(velocity * Time.fixedDeltaTime);
         hits = rb.SweepTestAll(displacement.normalized, Mathf.Abs(displacement.magnitude));
         foreach(RaycastHit hit in hits)
         {
             if(hit.collider.gameObject.CompareTag("Wall"))
             {
-                if(hit.distance < displacement.magnitude)
-                    displacement = (hit.distance - errorAmount) * displacement.normalized;
+                displacement -= (displacement.magnitude - hit.distance + errorAmount) * -hit.normal;
+                this.velocity = Vector2.zero;
             }
         }
+        if(displacement.y < 0.01f)
+            displacement.y = 0;
         rb.MovePosition(rb.position + displacement);
     }
 }
