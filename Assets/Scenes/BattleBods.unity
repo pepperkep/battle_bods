@@ -450,8 +450,8 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 2.56, y: 2.5600002, z: 0.2}
-  m_Center: {x: 0, y: 0, z: 0}
+  m_Size: {x: 27.324564, y: 2.952531, z: 16.729881}
+  m_Center: {x: 0.4804926, y: -0.013084292, z: 4.1314883}
 --- !u!1 &1335853927
 GameObject:
   m_ObjectHideFlags: 0
@@ -1300,6 +1300,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: BuzzArm
       objectReference: {fileID: 0}
+    - target: {fileID: 4208146962000425520, guid: 1aa6448d8702dbf459883684a26f2a34, type: 3}
+      propertyPath: m_TagString
+      value: Arm
+      objectReference: {fileID: 0}
     - target: {fileID: 4208146962000425521, guid: 1aa6448d8702dbf459883684a26f2a34, type: 3}
       propertyPath: m_RootOrder
       value: 0
@@ -1466,6 +1470,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1495883723}
     m_Modifications:
+    - target: {fileID: 1541114049372647047, guid: 9b79ef9f9b772e64782ac84096ee6484, type: 3}
+      propertyPath: m_Constraints
+      value: 56
+      objectReference: {fileID: 0}
     - target: {fileID: 3188651269201165985, guid: 9b79ef9f9b772e64782ac84096ee6484, type: 3}
       propertyPath: dependentObjects.Array.data[0]
       value: 
@@ -1473,6 +1481,10 @@ PrefabInstance:
     - target: {fileID: 3503663219167672702, guid: 9b79ef9f9b772e64782ac84096ee6484, type: 3}
       propertyPath: m_Name
       value: Weapon Arm
+      objectReference: {fileID: 0}
+    - target: {fileID: 3503663219167672702, guid: 9b79ef9f9b772e64782ac84096ee6484, type: 3}
+      propertyPath: m_TagString
+      value: Arm
       objectReference: {fileID: 0}
     - target: {fileID: 3503663219167672703, guid: 9b79ef9f9b772e64782ac84096ee6484, type: 3}
       propertyPath: m_RootOrder
@@ -1534,6 +1546,10 @@ PrefabInstance:
     - target: {fileID: 4208146962000425520, guid: 1aa6448d8702dbf459883684a26f2a34, type: 3}
       propertyPath: m_IsActive
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4208146962000425520, guid: 1aa6448d8702dbf459883684a26f2a34, type: 3}
+      propertyPath: m_TagString
+      value: Untagged
       objectReference: {fileID: 0}
     - target: {fileID: 4208146962000425521, guid: 1aa6448d8702dbf459883684a26f2a34, type: 3}
       propertyPath: m_RootOrder
