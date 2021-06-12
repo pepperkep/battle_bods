@@ -34,7 +34,11 @@ public class Damageable : MonoBehaviour
     public void OnTriggerEnter(Collider col)
     {
         Damager hurtbox = col.gameObject.GetComponent<Damager>();
-        if(hurtbox != null && ((hurtbox.damageEnemey && isEnemy) || (hurtbox.damagePlayer && !isEnemy)))
+        if(hurtbox != null && ((hurtbox.damageEnemy && isEnemy) || (hurtbox.damagePlayer && !isEnemy)))
+        {
             health -= hurtbox.damage;
+            if(hurtbox.destroyOnContact)
+                Destroy(hurtbox.gameObject);
+        }
     }
 }
