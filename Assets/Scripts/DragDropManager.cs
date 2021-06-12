@@ -9,29 +9,31 @@ public class DragDropManager : MonoBehaviour
     public bool canDrag;
     public bool isAttached = false;
     private Vector3 enemyPartPosition;//position of the enemy body part
-    private Rigidbody2D enemyBody;//enemy rigid body
+    private Rigidbody enemyBody;//enemy rigid body
     private float floorCheckDistance = 15f;
-    private RaycastHit2D[] collisionCheck = new RaycastHit2D[1];
+    private RaycastHit[] collisionCheck = new RaycastHit[1];
     // Start is called before the first frame update
     void Start()
     {
         enemyPartPosition = transform.position;  
         Debug.Log(enemyPartPosition);
-        enemyBody = GetComponent<Rigidbody2D>();
+        enemyBody = GetComponent<Rigidbody>();
         
     }
     void OnMouseDrag()
     {
         if (canDrag)
         {
+            Debug.Log("Dragging");
             Vector3 cursorScreenPoint = new Vector3(Input.mousePosition.x, Input.mousePosition.y, screenPoint.z);
             Vector3 cursorPosition = Camera.main.ScreenToWorldPoint(cursorScreenPoint) + offset;
             transform.position = cursorPosition;
         }
     }
 
-     void OnMouseDown()
+    void OnMouseDown()
     {
+        Debug.Log("Down");
         if (canDrag)
         {
             screenPoint = Camera.main.WorldToScreenPoint(gameObject.transform.position);
@@ -41,7 +43,7 @@ public class DragDropManager : MonoBehaviour
     }
 
     void OnMouseUp(){
-        if(canDrag)
+       if(canDrag)
             AttachToPlayer();
     }
 
@@ -53,8 +55,8 @@ public class DragDropManager : MonoBehaviour
             obj = "NoPlayer";
         if (canDrag)
         {
-            int hitNum = enemyBody.Cast(Vector2.down, collisionCheck, floorCheckDistance);
-            if(collisionCheck[0] != null && collisionCheck[0].transform != null){
+            bool sweep = enemyBody.SweepTest(Vector3.down, out collisionCheck[0], floorCheckDistance);
+            if(sweep != null && collisionCheck[0].transform != null){
                 bool foundPlayer = false;
                 if (collisionCheck[0].transform.name == obj && collisionCheck[0].distance != 0)
                 {
