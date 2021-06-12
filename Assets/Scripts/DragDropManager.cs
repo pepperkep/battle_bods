@@ -1,83 +1,47 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.InputSystem;
 
 public class DragDropManager : MonoBehaviour
 {
-    private Vector3 screenPoint;
-    private Vector3 offset;
-    public bool canDrag;
-    public bool isAttached = false;
-    private Vector3 enemyPartPosition;//position of the enemy body part
-    private Rigidbody enemyBody;//enemy rigid body
-    private float floorCheckDistance = 15f;
-    private RaycastHit[] collisionCheck = new RaycastHit[1];
+    private Rigidbody enemyPart;
+    private Vector3 originalPosition;
+    private Vector2 mouseMove;
+    [SerializeField] private float moveSpeed;
+    private bool isDraggable;
     // Start is called before the first frame update
     void Start()
     {
-        enemyPartPosition = transform.position;  
-        Debug.Log(enemyPartPosition);
-        enemyBody = GetComponent<Rigidbody>();
+       enemyPart = gameObject.GetComponent<Rigidbody>(); 
         
     }
-    void OnMouseDrag()
+    public void Update()
     {
-        if (canDrag)
-        {
-            Debug.Log("Dragging");
-            Vector3 cursorScreenPoint = new Vector3(Input.mousePosition.x, Input.mousePosition.y, screenPoint.z);
-            Vector3 cursorPosition = Camera.main.ScreenToWorldPoint(cursorScreenPoint) + offset;
-            transform.position = cursorPosition;
+       
+       
+    }
+
+    private void onGrabPart(InputAction.CallbackContext context){
+        if(isDraggable){
+        Debug.Log("Found enemy part!");
+        originalPosition = transform.position;  
+        Debug.Log(originalPosition);
         }
+
     }
 
-    void OnMouseDown()
-    {
-        Debug.Log("Down");
-        if (canDrag)
-        {
-            screenPoint = Camera.main.WorldToScreenPoint(gameObject.transform.position);
-            offset = (gameObject.transform.position - Camera.main.ScreenToWorldPoint(new Vector3(Input.mousePosition.x, Input.mousePosition.y, screenPoint.z)));
-            transform.DetachChildren();
-        }
+    private void onDragPart(InputAction.CallbackContext context){
+    if(isDraggable){
+    mouseMove = context.ReadValue<Vector2>();
+    enemyPart.MovePosition((enemyPart.position + ((Vector3)(mouseMove.x * Vector2.right * Time.fixedDeltaTime * moveSpeed))));
+    }
     }
 
-    void OnMouseUp(){
-       if(canDrag)
-            AttachToPlayer();
+    private void OnCollisionEnter(Collision other) {
+         if (other.gameObject.name == "Bod"){
+             this.gameObject.transform.parent = other.gameObject.transform;
+         }
     }
-
-    public void AttachToPlayer(){
-        string obj;
-        if (canDrag)
-            obj = "Bod";
-        else
-            obj = "NoPlayer";
-        if (canDrag)
-        {
-            bool sweep = enemyBody.SweepTest(Vector3.down, out collisionCheck[0], floorCheckDistance);
-            if(sweep != null && collisionCheck[0].transform != null){
-                bool foundPlayer = false;
-                if (collisionCheck[0].transform.name == obj && collisionCheck[0].distance != 0)
-                {
-                    transform.position = new Vector3(transform.position.x, transform.position.y - collisionCheck[0].distance, transform.position.z);
-                    foundPlayer = true; 
-                }
-                if (!foundPlayer){
-                    transform.position = enemyPartPosition;
-                }
-                isAttached = foundPlayer;
-            }
-        }
-    }
-
-    public void CanDragPart()
-    {
-        canDrag = true;
-    }
-
-    public void NoDragPart()
-    {
-        canDrag = false;
-    }
+    
 }
