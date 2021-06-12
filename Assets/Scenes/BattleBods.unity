@@ -706,6 +706,7 @@ MonoBehaviour:
   gravity: {x: 0, y: -9.8}
   errorAmount: 0.01
   moveSpeed: 6
+  jumpVelocity: 0
 --- !u!95 &1374737417
 Animator:
   serializedVersion: 3
@@ -834,6 +835,7 @@ MonoBehaviour:
   gravity: {x: 0, y: -9.8}
   errorAmount: 0.01
   moveSpeed: 5
+  jumpVelocity: 0
 --- !u!114 &1495883725
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1339,9 +1341,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 535f7f1bda2b3c249b582d90e51da7cc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  gravity: {x: 0, y: -9.8}
+  gravity: {x: 0, y: -20}
   errorAmount: 0.01
   moveSpeed: 0
+  jumpVelocity: 10
+  target: {fileID: 0}
+  minWaitAmount: 0.5
+  maxWaitAmount: 2.5
 --- !u!114 &1927885900
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1855,6 +1861,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1495883723}
     m_Modifications:
+    - target: {fileID: 7655751726056692149, guid: bfc4348c3e4e1064a8ce9c29235d9f9e, type: 3}
+      propertyPath: m_Controller
+      value: 
+      objectReference: {fileID: 9100000, guid: b18b35a8bd1484e45aa97c15e98fb65b, type: 2}
     - target: {fileID: 7655751726056692150, guid: bfc4348c3e4e1064a8ce9c29235d9f9e, type: 3}
       propertyPath: m_RootOrder
       value: 3

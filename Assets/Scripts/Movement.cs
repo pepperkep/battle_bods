@@ -11,6 +11,7 @@ public class Movement : MonoBehaviour
     public Vector2 gravity = new Vector2(0, -9.8f);
     public float errorAmount = 0.0001f;
     public float moveSpeed;
+    public float jumpVelocity;
 
     // Start is called before the first frame update
     void Awake()
@@ -19,6 +20,11 @@ public class Movement : MonoBehaviour
         rb = gameObject.GetComponent<Rigidbody>();
     }
 
+
+    public void Jump()
+    {
+        this.velocity.y += jumpVelocity;
+    }
     
     // Update is called once per frame
     void FixedUpdate()
