@@ -11,11 +11,4 @@ public class PlayerMovement : Movement
         nextMove = context.ReadValue<Vector2>();
         animator.SetFloat("speed", Mathf.Abs(nextMove.x));
     }
-
-    // Start is called before the first frame update
-    void Start()
-    {
-        animator = gameObject.GetComponent<Animator>();
-        rb = gameObject.GetComponent<Rigidbody>();
-    }
 }

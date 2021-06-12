@@ -10,7 +10,7 @@ public class Movement : MonoBehaviour
     public float moveSpeed;
 
     // Start is called before the first frame update
-    void Start()
+    void Awake()
     {
         animator = gameObject.GetComponent<Animator>();
         rb = gameObject.GetComponent<Rigidbody>();
