@@ -5,6 +5,7 @@ TagManager:
   serializedVersion: 2
   tags:
   - Wall
+  - Arm
   layers:
   - Default
   - TransparentFX
