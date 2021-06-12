@@ -6,4 +6,6 @@ public class Damager : MonoBehaviour
 {
     // Start is called before the first frame update
     public int damage;
+    public bool damagePlayer = true;
+    public bool damageEnemey = false;
 }
