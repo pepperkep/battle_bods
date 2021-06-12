@@ -11,11 +11,12 @@ public class DragDropManager : MonoBehaviour
     private Vector3 enemyPartPosition;//position of the enemy body part
     private Rigidbody2D playerBody;//player rigid body
     private float floorCheckDistance = 15f;
+    private RaycastHit2D[] collisionCheck = new RaycastHit2D[1];
     // Start is called before the first frame update
     void Start()
     {
         enemyPartPosition = transform.position;  
-        playerBody = GetComponent<Rigidbody2D>()
+        playerBody = GetComponent<Rigidbody2D>();
     }
     void OnMouseDrag()
     {
@@ -50,7 +51,7 @@ public class DragDropManager : MonoBehaviour
             obj = "Player1";
         if (canDrag)
         {
-            int hitNum = platformBody.Cast(Vector2.down, collisionCheck, floorCheckDistance);
+            int hitNum = playerBody.Cast(Vector2.down, collisionCheck, floorCheckDistance);
             if(collisionCheck[0] != null && collisionCheck[0].transform != null){
                 bool foundPlayer = false;
                 if (collisionCheck[0].transform.name == obj && collisionCheck[0].distance != 0)
