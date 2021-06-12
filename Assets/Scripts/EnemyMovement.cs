@@ -9,6 +9,7 @@ public class EnemyMovement : MonoBehaviour
     private bool moveTowards = true;
     private Rigidbody rb;
     private IEnumerator dirCoroutine;
+    public Animator animator;
 
     // Start is called before the first frame update
     void Start()
@@ -25,6 +26,7 @@ public class EnemyMovement : MonoBehaviour
         if(!moveTowards)
             moveDirection = Vector3.right;
         rb.MovePosition(rb.position + moveSpeed * Time.fixedDeltaTime * moveDirection);
+        animator.SetFloat("speed", Mathf.Abs(moveDirection.x));
     }
 
     IEnumerator SwitchDirection(float minMove, float maxMove)
