@@ -22,9 +22,81 @@
                     "interactions": ""
                 },
                 {
-                    "name": "Fire",
+                    "name": "Arm1",
                     "type": "Button",
                     "id": "646d42c7-c4b0-4ca0-97ee-42120434b79f",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": ""
+                },
+                {
+                    "name": "Arm2",
+                    "type": "Button",
+                    "id": "b8a68151-15c7-46f2-b04b-bece6c2f6fc5",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": ""
+                },
+                {
+                    "name": "Arm3",
+                    "type": "Button",
+                    "id": "22fad1ba-cd9e-42f9-948a-88af46b8fd48",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": ""
+                },
+                {
+                    "name": "Arm4",
+                    "type": "Button",
+                    "id": "426c6b5d-9139-4f7e-aa03-05147ea851c1",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": ""
+                },
+                {
+                    "name": "Arm5",
+                    "type": "Button",
+                    "id": "ac5243fc-293d-401c-89a2-9bd26ae7a663",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": ""
+                },
+                {
+                    "name": "Arm6",
+                    "type": "Button",
+                    "id": "11afc9d3-0140-4927-b3c4-a6ee6007ebd6",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": ""
+                },
+                {
+                    "name": "Arm7",
+                    "type": "Button",
+                    "id": "7026718e-1443-492e-9c45-7e01bca7a945",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": ""
+                },
+                {
+                    "name": "Arm8",
+                    "type": "Button",
+                    "id": "4942b7b7-f6f3-44d1-9533-f7715fb6b03b",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": ""
+                },
+                {
+                    "name": "Arm9",
+                    "type": "Button",
+                    "id": "225bb136-2315-4a79-b5c0-919bf7ad3397",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": ""
+                },
+                {
+                    "name": "Arm10",
+                    "type": "Button",
+                    "id": "138e4368-33e0-4fef-b15c-a35ac1e816b9",
                     "expectedControlType": "Button",
                     "processors": "",
                     "interactions": ""
@@ -198,56 +270,111 @@
                 },
                 {
                     "name": "",
-                    "id": "143bb1cd-cc10-4eca-a2f0-a3664166fe91",
-                    "path": "<Gamepad>/rightTrigger",
+                    "id": "1ef14d8d-2af7-42f2-8c64-35e80e40bead",
+                    "path": "<Keyboard>/#(2)",
                     "interactions": "",
                     "processors": "",
-                    "groups": ";Gamepad",
-                    "action": "Fire",
+                    "groups": "",
+                    "action": "Arm2",
                     "isComposite": false,
                     "isPartOfComposite": false
                 },
                 {
                     "name": "",
-                    "id": "05f6913d-c316-48b2-a6bb-e225f14c7960",
-                    "path": "<Mouse>/leftButton",
+                    "id": "1f285b95-1537-4bf9-9885-85f42fdbb944",
+                    "path": "<Keyboard>/#(3)",
                     "interactions": "",
                     "processors": "",
-                    "groups": ";Keyboard&Mouse",
-                    "action": "Fire",
+                    "groups": "",
+                    "action": "Arm3",
                     "isComposite": false,
                     "isPartOfComposite": false
                 },
                 {
                     "name": "",
-                    "id": "886e731e-7071-4ae4-95c0-e61739dad6fd",
-                    "path": "<Touchscreen>/primaryTouch/tap",
+                    "id": "a3ff7d17-187d-49b4-9a16-4478acbbf55d",
+                    "path": "<Keyboard>/#(4)",
                     "interactions": "",
                     "processors": "",
-                    "groups": ";Touch",
-                    "action": "Fire",
+                    "groups": "",
+                    "action": "Arm4",
                     "isComposite": false,
                     "isPartOfComposite": false
                 },
                 {
                     "name": "",
-                    "id": "ee3d0cd2-254e-47a7-a8cb-bc94d9658c54",
-                    "path": "<Joystick>/trigger",
+                    "id": "1e5e3759-746d-4437-bbd0-b8443447f784",
+                    "path": "<Keyboard>/#(5)",
                     "interactions": "",
                     "processors": "",
-                    "groups": "Joystick",
-                    "action": "Fire",
+                    "groups": "",
+                    "action": "Arm5",
                     "isComposite": false,
                     "isPartOfComposite": false
                 },
                 {
                     "name": "",
-                    "id": "8255d333-5683-4943-a58a-ccb207ff1dce",
-                    "path": "<XRController>/{PrimaryAction}",
+                    "id": "336e3fdf-4f9e-499a-bfec-8233f2157f51",
+                    "path": "<Keyboard>/#(6)",
                     "interactions": "",
                     "processors": "",
-                    "groups": "XR",
-                    "action": "Fire",
+                    "groups": "",
+                    "action": "Arm6",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "1aaa5a1e-6c9c-42ac-940b-e1537d1e4cae",
+                    "path": "<Keyboard>/#(7)",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Arm7",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "c605eb87-4a0c-489a-bbe0-feae448b7d63",
+                    "path": "<Keyboard>/#(8)",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Arm8",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "4f1d8fc0-3cad-44e2-93f3-33b071849323",
+                    "path": "<Keyboard>/#(9)",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Arm9",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "0b00a755-c6a3-4aa6-b4ec-36dc0dea05c9",
+                    "path": "<Keyboard>/#(0)",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Arm10",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "ad23408e-1d8a-432c-929b-84127642f418",
+                    "path": "<Keyboard>/#(1)",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "Keyboard&Mouse",
+                    "action": "Arm1",
                     "isComposite": false,
                     "isPartOfComposite": false
                 }

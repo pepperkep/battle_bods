@@ -6,6 +6,7 @@ using UnityEngine.InputSystem;
 public class Weapon : MonoBehaviour
 {
     // Start is called before the first frame update
+    public int keyNumber = 1;
     private Animator anim;
     void Start()
     {
@@ -13,8 +14,9 @@ public class Weapon : MonoBehaviour
     }
 
     // Update is called once per frame
-    public void OnFire(InputAction.CallbackContext context) 
+    public void OnFire(bool value) 
     {
-       anim.SetBool("FireWeapon", context.ReadValue<float>() > 0.5f); 
+       //anim.SetBool("FireWeapon", context.ReadValue<float>() > 0.5f); 
+       anim.SetBool("FireWeapon", value); 
     }
 }
