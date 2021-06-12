@@ -2,12 +2,10 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class EnemyMovement : MonoBehaviour
+public class EnemyMovement : Movement 
 {
 
-    [SerializeField] private float moveSpeed = 6;
     private bool moveTowards = true;
-    private Rigidbody rb;
     private IEnumerator dirCoroutine;
 
     // Start is called before the first frame update
@@ -19,12 +17,12 @@ public class EnemyMovement : MonoBehaviour
     }
 
     // Update is called once per frame
-    void FixedUpdate()
+    void Update()
     {
-        Vector3 moveDirection = Vector3.left;
+        Vector3 moveDirection = Vector2.left;
         if(!moveTowards)
-            moveDirection = Vector3.right;
-        rb.MovePosition(rb.position + moveSpeed * Time.fixedDeltaTime * moveDirection);
+            moveDirection = Vector2.right;
+        nextMove = moveDirection;
     }
 
     IEnumerator SwitchDirection(float minMove, float maxMove)

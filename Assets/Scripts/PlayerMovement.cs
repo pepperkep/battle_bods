@@ -3,13 +3,8 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
-public class PlayerMovement : MonoBehaviour
+public class PlayerMovement : Movement 
 {
-
-    [SerializeField] private float moveSpeed;
-    private Rigidbody rb;
-    private Vector2 nextMove;
-    public Animator animator;
 
     public void Move(InputAction.CallbackContext context)
     {
@@ -22,11 +17,5 @@ public class PlayerMovement : MonoBehaviour
     {
         animator = gameObject.GetComponent<Animator>();
         rb = gameObject.GetComponent<Rigidbody>();
-    }
-
-    // Update is called once per frame
-    void FixedUpdate()
-    {
-        rb.MovePosition(rb.position + ((Vector3)(nextMove.x * Vector2.right * Time.fixedDeltaTime * moveSpeed)));
     }
 }
