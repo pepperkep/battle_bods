@@ -23,7 +23,7 @@ public class Movement : MonoBehaviour
     {
         RaycastHit[] hits = new RaycastHit[128];
         Vector3 displacement = ((Vector3)(nextMove.x * Vector2.right * Time.fixedDeltaTime * moveSpeed));
-        hits = rb.SweepTestAll(displacement.normalized);//, Mathf.Abs(displacement.magnitude));
+        hits = rb.SweepTestAll(displacement.normalized, Mathf.Abs(displacement.magnitude));
         foreach(RaycastHit hit in hits)
         {
             if(hit.collider.gameObject.CompareTag("Wall"))
