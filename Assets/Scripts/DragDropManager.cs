@@ -9,21 +9,30 @@ public class DragDropManager : MonoBehaviour
     private Vector3 originalPosition;
     private Vector2 mouseMove;
     [SerializeField] private float moveSpeed;
-    private bool isDraggable;
+    [SerializeField] private bool isDraggable;
+    bool isGrabbed = false;
+    bool canAttach = true;
+    Vector2 pos;
     // Start is called before the first frame update
     void Start()
     {
        enemyPart = gameObject.GetComponent<Rigidbody>(); 
         
     }
-    public void Update()
+    void FixedUpdate()
     {
-       
-       
+        
+             pos = Camera.main.ScreenToViewportPoint(Mouse.current.position.ReadValue());
+            //Debug.Log(pos);
+            
+            
+            
+        
     }
-
-    private void onGrabPart(InputAction.CallbackContext context){
+    
+    public void onGrabPart(InputAction.CallbackContext context){
         if(isDraggable){
+        isGrabbed = true;
         Debug.Log("Found enemy part!");
         originalPosition = transform.position;  
         Debug.Log(originalPosition);
@@ -31,17 +40,28 @@ public class DragDropManager : MonoBehaviour
 
     }
 
-    private void onDragPart(InputAction.CallbackContext context){
-    if(isDraggable){
+    public void onDragPart(InputAction.CallbackContext context){
+    if(isDraggable && isGrabbed){
     mouseMove = context.ReadValue<Vector2>();
-    enemyPart.MovePosition((enemyPart.position + ((Vector3)(mouseMove.x * Vector2.right * Time.fixedDeltaTime * moveSpeed))));
+    enemyPart.MovePosition((enemyPart.position + ((Vector3)(mouseMove))));
     }
     }
 
-    private void OnCollisionEnter(Collision other) {
-         if (other.gameObject.name == "Bod"){
-             this.gameObject.transform.parent = other.gameObject.transform;
-         }
+     private void OnCollisionEnter(Collision other) {
+        if(other.gameObject.name == "Bod"){
+            Debug.Log("Found new body");
+            canAttach = true;
+        }
+    }
+
+    public void OnReleasePart(InputAction.CallbackContext context) {
+        if(canAttach){
+        isGrabbed = false;
+         GameObject bod = GameObject.Find("Bod");
+        this.gameObject.transform.SetParent(bod.gameObject.transform, true);
+        
+        }
+         
     }
     
 }
