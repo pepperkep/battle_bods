@@ -57,9 +57,10 @@ public class DragDropManager : MonoBehaviour
     public void OnReleasePart(InputAction.CallbackContext context) {
         if(canAttach){
         isGrabbed = false;
-         GameObject bod = GameObject.Find("Bod");
+        isDraggable = false;
+         GameObject bod = GameObject.Find(" Hero Arm Parent");
         this.gameObject.transform.SetParent(bod.gameObject.transform, true);
-        
+        transform.parent.GetComponent<Animator>().enabled = true;
         }
          
     }
