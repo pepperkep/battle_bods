@@ -9,10 +9,16 @@ public class Damageable : MonoBehaviour
     public bool isDead = false;
     public List<GameObject> dependentObjects;
     public int resetHealthValue = 10;
+    public int currentHealth;
+
+    public void Start()
+    {
+        currentHealth = health;
+    }
 
     public void Update()
     {
-        if(health <= 0)
+        if(currentHealth <= 0)
         {
             if(gameObject.CompareTag("Arm") && !isDead)
             {
@@ -36,7 +42,7 @@ public class Damageable : MonoBehaviour
         rb.isKinematic = false;
         rb.useGravity = true;
         isDead = true;
-        health = resetHealthValue;
+        currentHealth = resetHealthValue;
     }
 
     public void OnTriggerEnter(Collider col)
@@ -44,7 +50,7 @@ public class Damageable : MonoBehaviour
         Damager hurtbox = col.gameObject.GetComponent<Damager>();
         if(hurtbox != null && ((hurtbox.damageEnemy && isEnemy) || (hurtbox.damagePlayer && !isEnemy)))
         {
-            health -= hurtbox.damage;
+            currentHealth -= hurtbox.damage;
             if(hurtbox.destroyOnContact)
                 Destroy(hurtbox.gameObject);
         }
