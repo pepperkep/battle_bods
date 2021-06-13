@@ -24,6 +24,7 @@ public class EnemyMovement : Movement
             moveDirection = Vector2.right;
         nextMove = moveDirection;
         this.animator.SetFloat("speed", Mathf.Abs(moveDirection.x));
+        JukeBox.Instance().playEnemySound();
     }
 
     IEnumerator SwitchDirection(float minMove, float maxMove)

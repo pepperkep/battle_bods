@@ -17,6 +17,7 @@ public class SceneManagement : MonoBehaviour
     void Start()
     {
         DontDestroyOnLoad(this.gameObject);
+        JukeBox.Instance().music.Play();
     }
 
     public static void FindAndLoadNextScene()

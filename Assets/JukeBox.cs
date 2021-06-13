@@ -23,7 +23,7 @@ public class JukeBox : MonoBehaviour
 
 
 
-    [SerializeField] private AudioSource music;
+    [SerializeField] public AudioSource music;
     [SerializeField] private AudioSource alternateMusic;
     [SerializeField] private AudioSource winSound;
     [SerializeField] private AudioSource loseSound;
