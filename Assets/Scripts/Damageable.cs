@@ -38,6 +38,7 @@ public class Damageable : MonoBehaviour
     public void ArmDeath()
     {
         transform.parent.GetComponent<Animator>().enabled = false;
+        transform.parent.parent = null;
         Rigidbody rb = gameObject.GetComponent<Rigidbody>();
         rb.isKinematic = false;
         rb.useGravity = true;
