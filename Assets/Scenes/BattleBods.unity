@@ -1555,7 +1555,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c23409cda9eb12143b0c8f025905d9bf, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  health: 5
+  health: 1
   isEnemy: 1
   dependentObjects: []
 --- !u!54 &1927885902
@@ -1762,6 +1762,26 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1374737412}
     m_Modifications:
+    - target: {fileID: 4298581032382952345, guid: 84139d28d95ba984abad12bf2e87e7a2, type: 3}
+      propertyPath: m_Size.x
+      value: 0.9431845
+      objectReference: {fileID: 0}
+    - target: {fileID: 4298581032382952345, guid: 84139d28d95ba984abad12bf2e87e7a2, type: 3}
+      propertyPath: m_Size.y
+      value: 0.066452965
+      objectReference: {fileID: 0}
+    - target: {fileID: 4298581032382952345, guid: 84139d28d95ba984abad12bf2e87e7a2, type: 3}
+      propertyPath: m_Center.x
+      value: -0.3583153
+      objectReference: {fileID: 0}
+    - target: {fileID: 4298581032382952345, guid: 84139d28d95ba984abad12bf2e87e7a2, type: 3}
+      propertyPath: m_Center.y
+      value: 0.09097548
+      objectReference: {fileID: 0}
+    - target: {fileID: 4298581032382952346, guid: 84139d28d95ba984abad12bf2e87e7a2, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 4298581032970856606, guid: 84139d28d95ba984abad12bf2e87e7a2, type: 3}
       propertyPath: m_Name
       value: BuzzArm
@@ -1822,6 +1842,10 @@ PrefabInstance:
     - target: {fileID: 1541114049372647047, guid: 9b79ef9f9b772e64782ac84096ee6484, type: 3}
       propertyPath: m_Constraints
       value: 56
+      objectReference: {fileID: 0}
+    - target: {fileID: 3188651269201165985, guid: 9b79ef9f9b772e64782ac84096ee6484, type: 3}
+      propertyPath: dependentObjects.Array.size
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3188651269201165985, guid: 9b79ef9f9b772e64782ac84096ee6484, type: 3}
       propertyPath: dependentObjects.Array.data[0]
@@ -1888,6 +1912,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1495883723}
     m_Modifications:
+    - target: {fileID: 2790412149484090863, guid: 1aa6448d8702dbf459883684a26f2a34, type: 3}
+      propertyPath: health
+      value: 15
+      objectReference: {fileID: 0}
     - target: {fileID: 4208146962000425520, guid: 1aa6448d8702dbf459883684a26f2a34, type: 3}
       propertyPath: m_Name
       value: Arm Parent
@@ -1954,6 +1982,10 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4208146962621655348, guid: 1aa6448d8702dbf459883684a26f2a34, type: 3}
       propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4208146962621655350, guid: 1aa6448d8702dbf459883684a26f2a34, type: 3}
+      propertyPath: damageEnemy
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4208146962621655350, guid: 1aa6448d8702dbf459883684a26f2a34, type: 3}
@@ -2069,6 +2101,10 @@ PrefabInstance:
       propertyPath: m_Center.z
       value: -3.0710433
       objectReference: {fileID: 0}
+    - target: {fileID: 8017844769666770141, guid: fefed8f19aebdf446aa838c0c7c995cc, type: 3}
+      propertyPath: damageEnemy
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 8017844769666770142, guid: fefed8f19aebdf446aa838c0c7c995cc, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0.99
@@ -2142,6 +2178,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: Gun Arm
       objectReference: {fileID: 0}
+    - target: {fileID: 7655751726056692151, guid: bfc4348c3e4e1064a8ce9c29235d9f9e, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8566251038967012968, guid: bfc4348c3e4e1064a8ce9c29235d9f9e, type: 3}
+      propertyPath: health
+      value: 15
+      objectReference: {fileID: 0}
     - target: {fileID: 8566251038967012968, guid: bfc4348c3e4e1064a8ce9c29235d9f9e, type: 3}
       propertyPath: dependentObjects.Array.data[0]
       value: 
@@ -2158,6 +2202,10 @@ PrefabInstance:
     - target: {fileID: 200691942496891176, guid: 6875f589b9b793642ad5cd4b111c8f99, type: 3}
       propertyPath: m_Name
       value: Gun
+      objectReference: {fileID: 0}
+    - target: {fileID: 200691942496891176, guid: 6875f589b9b793642ad5cd4b111c8f99, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 200691942496891177, guid: 6875f589b9b793642ad5cd4b111c8f99, type: 3}
       propertyPath: m_RootOrder
