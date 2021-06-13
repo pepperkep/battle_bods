@@ -100,6 +100,30 @@
                     "expectedControlType": "Button",
                     "processors": "",
                     "interactions": ""
+                },
+                {
+                    "name": "Grab Part",
+                    "type": "Button",
+                    "id": "783cf6d3-4464-45f6-9147-aaf3c032c1a0",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": ""
+                },
+                {
+                    "name": "Drag Part",
+                    "type": "Value",
+                    "id": "dabfc65f-aa9f-4dd4-8b01-a6647f54cb3b",
+                    "expectedControlType": "Vector2",
+                    "processors": "",
+                    "interactions": ""
+                },
+                {
+                    "name": "Release Part",
+                    "type": "Button",
+                    "id": "b1f71d62-db80-4edd-a886-91514ebf032a",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": ""
                 }
             ],
             "bindings": [
@@ -375,6 +399,39 @@
                     "processors": "",
                     "groups": "Keyboard&Mouse",
                     "action": "Arm1",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "f813ef19-a00c-48ae-a143-1ce9301072d9",
+                    "path": "<Mouse>/rightButton",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "Keyboard&Mouse",
+                    "action": "Grab Part",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "623b38d3-7c1c-49a2-a63c-92244ec4d0c7",
+                    "path": "<Mouse>/delta",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "Keyboard&Mouse",
+                    "action": "Drag Part",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "9ba15c7f-2335-426f-b4f6-38f161e35a44",
+                    "path": "<Keyboard>/x",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "Keyboard&Mouse",
+                    "action": "Release Part",
                     "isComposite": false,
                     "isPartOfComposite": false
                 }
