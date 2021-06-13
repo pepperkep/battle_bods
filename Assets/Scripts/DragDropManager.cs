@@ -27,6 +27,10 @@ public class DragDropManager : MonoBehaviour
     public void onGrabPart(InputAction.CallbackContext context)
     {
         pos = mainCamera.ScreenToViewportPoint(mousePosition);
+        Vector2 nextMousePosition = Mouse.current.position.ReadValue();
+        Vector3 mouseMove = mainCamera.ScreenToWorldPoint(nextMousePosition) - mainCamera.ScreenToWorldPoint(mousePosition);
+        mousePosition = nextMousePosition;
+        Vector3 nextWorldPos = mainCamera.ScreenToWorldPoint(nextMousePosition);
         if(context.ReadValue<float>() > 0.5f)
         {
             mousePosition = Mouse.current.position.ReadValue();
@@ -37,14 +41,17 @@ public class DragDropManager : MonoBehaviour
                 if(hit.transform.CompareTag("Arm") && hit.transform.parent.parent == null)
                 {
                     selectedObject = hit.transform.parent.gameObject;
-                    offset = (Vector2)(mainCamera.ScreenToWorldPoint(mousePosition) - selectedObject.transform.position);
-                    selectedObject.transform.SetParent(null);
+                    selectedObject.transform.SetParent(null, true);
                     Damageable damageComponent = selectedObject.GetComponentInChildren<Damageable>();
                     Damager damagerComponent = selectedObject.GetComponentInChildren<Damager>();
                     Rigidbody rb = selectedObject.GetComponentInChildren<Rigidbody>();
                     rb.isKinematic = true;
                     damageComponent.isEnemy = false;
                     damageComponent.isDead = false;
+                    Vector3 tmp = selectedObject.transform.GetChild(0).transform.position;
+                    selectedObject.transform.position = new Vector3(nextWorldPos.x, nextWorldPos.y, selectedObject.transform.position.z);
+                    selectedObject.transform.GetChild(0).position = tmp;
+                    offset = (Vector2)(mainCamera.ScreenToWorldPoint(mousePosition) - selectedObject.transform.position);
                     damagerComponent.damageEnemy = true;
                     damagerComponent.damagePlayer = false;
                 }
@@ -69,6 +76,7 @@ public class DragDropManager : MonoBehaviour
 
             if (onBod)
             {
+                selectedObject.transform.position = new Vector3(nextWorldPos.x, nextWorldPos.y) - (Vector3)offset;
                 selectedObject.transform.SetParent(bod.gameObject.transform, true);
                 selectedObject.GetComponent<Animator>().enabled = true;
             }

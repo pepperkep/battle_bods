@@ -10,10 +10,12 @@ public class Damageable : MonoBehaviour
     public List<GameObject> dependentObjects;
     public int resetHealthValue = 10;
     public int currentHealth;
+    public Vector3 originalLocalPos;
 
     public void Start()
     {
         currentHealth = health;
+        originalLocalPos = transform.localPosition;
     }
 
     public void Update()
