@@ -70,7 +70,7 @@ public class JukeBox : MonoBehaviour
         altMusicOn = !altMusicOn;
     }
 
-    public void playlaserSound()
+    public void playLaserSound()
     {
         laserSound.Play();
     }
