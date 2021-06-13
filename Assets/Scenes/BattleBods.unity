@@ -492,7 +492,7 @@ SpriteRenderer:
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 2
-  m_Size: {x: 42, y: 4}
+  m_Size: {x: 47.511635, y: 4}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
@@ -506,7 +506,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1261762432}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.01, y: -4.46, z: -0.75550693}
+  m_LocalPosition: {x: 2.7658, y: -4.46, z: -0.75550693}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -523,8 +523,8 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 41.689198, y: 2.952531, z: 34.939278}
-  m_Center: {x: -0.045042038, y: -0.013084292, z: -4.9732056}
+  m_Size: {x: 47.098763, y: 2.952531, z: 34.939278}
+  m_Center: {x: 0.10805893, y: -0.013084292, z: -4.9732056}
 --- !u!54 &1261762436
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -1911,6 +1911,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3503663219202369147, guid: 9b79ef9f9b772e64782ac84096ee6484, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 74071f18fa656c241b0af397862156c2, type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9b79ef9f9b772e64782ac84096ee6484, type: 3}
 --- !u!1001 &4208146962937862028
@@ -1983,7 +1987,11 @@ PrefabInstance:
     - target: {fileID: 4208146962233634101, guid: 1aa6448d8702dbf459883684a26f2a34, type: 3}
       propertyPath: m_Sprite
       value: 
-      objectReference: {fileID: 21300000, guid: 2e7ce16443502694984e8a7257e59082, type: 3}
+      objectReference: {fileID: 21300000, guid: 74071f18fa656c241b0af397862156c2, type: 3}
+    - target: {fileID: 4208146962233634101, guid: 1aa6448d8702dbf459883684a26f2a34, type: 3}
+      propertyPath: m_WasSpriteAssigned
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 4208146962233634102, guid: 1aa6448d8702dbf459883684a26f2a34, type: 3}
       propertyPath: m_LocalScale.y
       value: 1
@@ -2134,6 +2142,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1495883723}
     m_Modifications:
+    - target: {fileID: 7655751726020871858, guid: bfc4348c3e4e1064a8ce9c29235d9f9e, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 74071f18fa656c241b0af397862156c2, type: 3}
     - target: {fileID: 7655751726056692149, guid: bfc4348c3e4e1064a8ce9c29235d9f9e, type: 3}
       propertyPath: m_Controller
       value: 
