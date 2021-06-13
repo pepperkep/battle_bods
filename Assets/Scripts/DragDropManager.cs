@@ -17,7 +17,7 @@ public class DragDropManager : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-       mainCamera = Camera.main;
+       DontDestroyOnLoad(this.gameObject);
     }
     void Update()
     {
@@ -26,6 +26,7 @@ public class DragDropManager : MonoBehaviour
     
     public void onGrabPart(InputAction.CallbackContext context)
     {
+        mainCamera = Camera.main;
         pos = mainCamera.ScreenToViewportPoint(mousePosition);
         Vector2 nextMousePosition = Mouse.current.position.ReadValue();
         Vector3 mouseMove = mainCamera.ScreenToWorldPoint(nextMousePosition) - mainCamera.ScreenToWorldPoint(mousePosition);
