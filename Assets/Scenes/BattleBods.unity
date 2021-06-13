@@ -203,13 +203,106 @@ Transform:
   m_LocalScale: {x: 1.5452001, y: 2.337702, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 8
+  m_RootOrder: 9
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &182733686 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4298581032970856607, guid: 84139d28d95ba984abad12bf2e87e7a2, type: 3}
   m_PrefabInstance: {fileID: 126654879025359009}
   m_PrefabAsset: {fileID: 0}
+--- !u!1001 &468235186
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 2844162672305893185, guid: 84139d28d95ba984abad12bf2e87e7a2, type: 3}
+      propertyPath: isEnemy
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4298581032382952345, guid: 84139d28d95ba984abad12bf2e87e7a2, type: 3}
+      propertyPath: m_Size.x
+      value: 0.9431845
+      objectReference: {fileID: 0}
+    - target: {fileID: 4298581032382952345, guid: 84139d28d95ba984abad12bf2e87e7a2, type: 3}
+      propertyPath: m_Size.y
+      value: 0.066452965
+      objectReference: {fileID: 0}
+    - target: {fileID: 4298581032382952345, guid: 84139d28d95ba984abad12bf2e87e7a2, type: 3}
+      propertyPath: m_Center.x
+      value: -0.3583153
+      objectReference: {fileID: 0}
+    - target: {fileID: 4298581032382952345, guid: 84139d28d95ba984abad12bf2e87e7a2, type: 3}
+      propertyPath: m_Center.y
+      value: 0.09097548
+      objectReference: {fileID: 0}
+    - target: {fileID: 4298581032382952346, guid: 84139d28d95ba984abad12bf2e87e7a2, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4298581032970856604, guid: 84139d28d95ba984abad12bf2e87e7a2, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4298581032970856606, guid: 84139d28d95ba984abad12bf2e87e7a2, type: 3}
+      propertyPath: m_Name
+      value: DraggableBuzzArm
+      objectReference: {fileID: 0}
+    - target: {fileID: 4298581032970856607, guid: 84139d28d95ba984abad12bf2e87e7a2, type: 3}
+      propertyPath: m_RootOrder
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 4298581032970856607, guid: 84139d28d95ba984abad12bf2e87e7a2, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4298581032970856607, guid: 84139d28d95ba984abad12bf2e87e7a2, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4298581032970856607, guid: 84139d28d95ba984abad12bf2e87e7a2, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 9.83
+      objectReference: {fileID: 0}
+    - target: {fileID: 4298581032970856607, guid: 84139d28d95ba984abad12bf2e87e7a2, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -0.282
+      objectReference: {fileID: 0}
+    - target: {fileID: 4298581032970856607, guid: 84139d28d95ba984abad12bf2e87e7a2, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4298581032970856607, guid: 84139d28d95ba984abad12bf2e87e7a2, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4298581032970856607, guid: 84139d28d95ba984abad12bf2e87e7a2, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4298581032970856607, guid: 84139d28d95ba984abad12bf2e87e7a2, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4298581032970856607, guid: 84139d28d95ba984abad12bf2e87e7a2, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4298581032970856607, guid: 84139d28d95ba984abad12bf2e87e7a2, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4298581032970856607, guid: 84139d28d95ba984abad12bf2e87e7a2, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4298581032970856607, guid: 84139d28d95ba984abad12bf2e87e7a2, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 84139d28d95ba984abad12bf2e87e7a2, type: 3}
 --- !u!1 &490232170
 GameObject:
   m_ObjectHideFlags: 0
@@ -643,7 +736,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1335853927}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 7.12, z: -13.45}
+  m_LocalPosition: {x: 0, y: 7.71, z: -13.45}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -872,7 +965,7 @@ GameObject:
   - component: {fileID: 1495883730}
   m_Layer: 0
   m_Name: Bod
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1210,6 +1303,42 @@ MonoBehaviour:
         m_CallState: 2
     m_ActionId: 138e4368-33e0-4fef-b15c-a35ac1e816b9
     m_ActionName: Player/Arm10[/Keyboard/0]
+  - m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 1675432017}
+        m_TargetAssemblyTypeName: DragDropManager, Assembly-CSharp
+        m_MethodName: onGrabPart
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_ActionId: 783cf6d3-4464-45f6-9147-aaf3c032c1a0
+    m_ActionName: Player/Grab Part[/Mouse/rightButton]
+  - m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 1675432017}
+        m_TargetAssemblyTypeName: DragDropManager, Assembly-CSharp
+        m_MethodName: onDragPart
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_ActionId: dabfc65f-aa9f-4dd4-8b01-a6647f54cb3b
+    m_ActionName: Player/Drag Part[/Mouse/delta]
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: b1f71d62-db80-4edd-a886-91514ebf032a
+    m_ActionName: Player/Release Part[/Keyboard/x]
   m_NeverAutoSwitchControlSchemes: 0
   m_DefaultControlScheme: Keyboard&Mouse
   m_DefaultActionMap: Player
@@ -1421,6 +1550,49 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 90}
+--- !u!1 &1675432016
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1675432018}
+  - component: {fileID: 1675432017}
+  m_Layer: 0
+  m_Name: DragDropManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1675432017
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1675432016}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9c7779629bf004882ba861d53aa526c8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!4 &1675432018
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1675432016}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -1.7638686, y: 4.1946054, z: -0.113127135}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 10
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &1733224046 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 200691942496891177, guid: 6875f589b9b793642ad5cd4b111c8f99, type: 3}
@@ -1912,6 +2084,10 @@ PrefabInstance:
     - target: {fileID: 3503663219167672702, guid: 9b79ef9f9b772e64782ac84096ee6484, type: 3}
       propertyPath: m_Name
       value: Weapon Arm
+      objectReference: {fileID: 0}
+    - target: {fileID: 3503663219167672702, guid: 9b79ef9f9b772e64782ac84096ee6484, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 3503663219167672702, guid: 9b79ef9f9b772e64782ac84096ee6484, type: 3}
       propertyPath: m_TagString
