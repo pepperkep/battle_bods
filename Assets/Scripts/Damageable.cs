@@ -6,20 +6,26 @@ public class Damageable : MonoBehaviour
 {
     public int health;
     public bool isEnemy = false;
+    public bool isDead = false;
     public List<GameObject> dependentObjects;
+    public int resetHealthValue = 10;
 
     public void Update()
     {
         if(health <= 0)
         {
-            foreach (GameObject obj in dependentObjects)
+            if(gameObject.CompareTag("Arm") && !isDead)
             {
-                Destroy(obj);
-            }
-            if(gameObject.CompareTag("Arm"))
                 ArmDeath();
+            }
             else
+            {
+                foreach (GameObject obj in dependentObjects)
+                {
+                    Destroy(obj);
+                }
                 Destroy(this.gameObject);
+            }
         }
     }
 
@@ -29,6 +35,8 @@ public class Damageable : MonoBehaviour
         Rigidbody rb = gameObject.GetComponent<Rigidbody>();
         rb.isKinematic = false;
         rb.useGravity = true;
+        isDead = true;
+        health = resetHealthValue;
     }
 
     public void OnTriggerEnter(Collider col)
