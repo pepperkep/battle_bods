@@ -813,7 +813,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   health: 20
   isEnemy: 1
+  isDead: 0
   dependentObjects: []
+  resetHealthValue: 5
 --- !u!114 &1374737416
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1275,7 +1277,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   health: 20
   isEnemy: 0
+  isDead: 0
   dependentObjects: []
+  resetHealthValue: 5
 --- !u!114 &1495883730
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1581,7 +1585,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   health: 1
   isEnemy: 1
+  isDead: 0
   dependentObjects: []
+  resetHealthValue: 5
 --- !u!54 &1927885902
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -1750,9 +1756,21 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4208146962233634101, guid: 1aa6448d8702dbf459883684a26f2a34, type: 3}
+      propertyPath: m_Size.x
+      value: 2.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 4208146962233634101, guid: 1aa6448d8702dbf459883684a26f2a34, type: 3}
+      propertyPath: m_Size.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4208146962233634101, guid: 1aa6448d8702dbf459883684a26f2a34, type: 3}
       propertyPath: m_Sprite
       value: 
       objectReference: {fileID: 21300000, guid: dadc487f05ff8e44aa35635994cb2911, type: 3}
+    - target: {fileID: 4208146962233634101, guid: 1aa6448d8702dbf459883684a26f2a34, type: 3}
+      propertyPath: m_WasSpriteAssigned
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 4208146962233634102, guid: 1aa6448d8702dbf459883684a26f2a34, type: 3}
       propertyPath: m_LocalPosition.x
       value: 1.22
@@ -1877,7 +1895,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3188651269201165985, guid: 9b79ef9f9b772e64782ac84096ee6484, type: 3}
       propertyPath: dependentObjects.Array.size
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 3188651269201165985, guid: 9b79ef9f9b772e64782ac84096ee6484, type: 3}
       propertyPath: dependentObjects.Array.data[0]
@@ -2240,12 +2258,12 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8566251038967012968, guid: bfc4348c3e4e1064a8ce9c29235d9f9e, type: 3}
       propertyPath: dependentObjects.Array.size
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8566251038967012968, guid: bfc4348c3e4e1064a8ce9c29235d9f9e, type: 3}
       propertyPath: dependentObjects.Array.data[0]
       value: 
-      objectReference: {fileID: 1812409359}
+      objectReference: {fileID: 898663197}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: bfc4348c3e4e1064a8ce9c29235d9f9e, type: 3}
 --- !u!1001 &7893714019983878302
