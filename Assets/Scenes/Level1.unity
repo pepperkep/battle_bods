@@ -802,7 +802,7 @@ MonoBehaviour:
   - Level2
   - Level3
   - Level4
-  currentSceneIndex: 0
+  currentSceneIndex: 1
 --- !u!4 &1100834397
 Transform:
   m_ObjectHideFlags: 0
