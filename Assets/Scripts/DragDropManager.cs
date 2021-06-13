@@ -11,6 +11,7 @@ public class DragDropManager : MonoBehaviour
     [SerializeField] private float moveSpeed;
     [SerializeField] private bool isDraggable;
     bool isGrabbed = false;
+    bool canAttach = true;
     Vector2 pos;
     // Start is called before the first frame update
     void Start()
@@ -43,14 +44,24 @@ public class DragDropManager : MonoBehaviour
     if(isDraggable && isGrabbed){
     mouseMove = context.ReadValue<Vector2>();
     enemyPart.MovePosition((enemyPart.position + ((Vector3)(mouseMove))));
-    
     }
     }
 
-    public void OnCollisionEnter(Collision other) {
-         if (other.gameObject.name == "Bod"){
-             this.gameObject.transform.parent = other.gameObject.transform;
-         }
+     private void OnCollisionEnter(Collision other) {
+        if(other.gameObject.name == "Bod"){
+            Debug.Log("Found new body");
+            canAttach = true;
+        }
+    }
+
+    public void OnReleasePart(InputAction.CallbackContext context) {
+        if(canAttach){
+        isGrabbed = false;
+         GameObject bod = GameObject.Find("Bod");
+        this.gameObject.transform.SetParent(bod.gameObject.transform, false);
+        this.gameObject.transform.position = bod.gameObject.transform.position;
+        }
+         
     }
     
 }
