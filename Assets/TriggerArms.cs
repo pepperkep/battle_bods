@@ -67,4 +67,16 @@ public class TriggerArms : MonoBehaviour
                 arm.OnFire(value);
         }
     }
+
+    void Update()
+    {
+        for(int i = 0; i < transform.childCount; i++)
+        {
+            Weapon weaponComponent = transform.GetChild(i).GetComponentInChildren<Weapon>();
+            if(weaponComponent != null && !triggerArms.Contains(weaponComponent))
+            {
+                triggerArms.Add(weaponComponent);
+            }
+        }
+    }
 }

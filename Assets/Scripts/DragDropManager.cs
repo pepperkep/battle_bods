@@ -34,7 +34,7 @@ public class DragDropManager : MonoBehaviour
             RaycastHit hit;
             if(Physics.Raycast(ray, out hit))
             {
-                if(hit.transform.CompareTag("Arm"))
+                if(hit.transform.CompareTag("Arm") && hit.transform.parent == null)
                 {
                     selectedObject = hit.transform.parent.gameObject;
                     offset = (Vector2)(mainCamera.ScreenToWorldPoint(mousePosition) - selectedObject.transform.position);
