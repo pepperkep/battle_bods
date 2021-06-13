@@ -18,6 +18,7 @@ public class DragDropManager : MonoBehaviour
     void Start()
     {
        DontDestroyOnLoad(this.gameObject);
+       mainCamera = Camera.main;
     }
     void Update()
     {
