@@ -58,8 +58,8 @@ public class DragDropManager : MonoBehaviour
         if(canAttach){
         isGrabbed = false;
          GameObject bod = GameObject.Find("Bod");
-        this.gameObject.transform.SetParent(bod.gameObject.transform, false);
-        this.gameObject.transform.position = bod.gameObject.transform.position;
+        this.gameObject.transform.SetParent(bod.gameObject.transform, true);
+        
         }
          
     }
