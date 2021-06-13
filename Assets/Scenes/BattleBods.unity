@@ -788,7 +788,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   health: 20
-  isEnemy: 0
+  isEnemy: 1
   dependentObjects: []
 --- !u!114 &1374737416
 MonoBehaviour:
@@ -1742,16 +1742,20 @@ PrefabInstance:
       value: -3
       objectReference: {fileID: 0}
     - target: {fileID: 4208146962621655351, guid: 1aa6448d8702dbf459883684a26f2a34, type: 3}
+      propertyPath: m_Size.x
+      value: 1.2548487
+      objectReference: {fileID: 0}
+    - target: {fileID: 4208146962621655351, guid: 1aa6448d8702dbf459883684a26f2a34, type: 3}
       propertyPath: m_Size.y
-      value: 0.05315564
+      value: 0.07750321
       objectReference: {fileID: 0}
     - target: {fileID: 4208146962621655351, guid: 1aa6448d8702dbf459883684a26f2a34, type: 3}
       propertyPath: m_Center.x
-      value: -0.19336152
+      value: -0.5141474
       objectReference: {fileID: 0}
     - target: {fileID: 4208146962621655351, guid: 1aa6448d8702dbf459883684a26f2a34, type: 3}
       propertyPath: m_Center.y
-      value: 0.090003796
+      value: 0.07783002
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 1aa6448d8702dbf459883684a26f2a34, type: 3}
@@ -1762,6 +1766,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1374737412}
     m_Modifications:
+    - target: {fileID: 2844162672305893185, guid: 84139d28d95ba984abad12bf2e87e7a2, type: 3}
+      propertyPath: isEnemy
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 4298581032382952345, guid: 84139d28d95ba984abad12bf2e87e7a2, type: 3}
       propertyPath: m_Size.x
       value: 0.9431845
