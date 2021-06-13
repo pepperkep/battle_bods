@@ -8,6 +8,10 @@ public class TriggerArms : MonoBehaviour
 
     public List<Weapon> triggerArms;
 
+    void Start()
+    {
+        DontDestroyOnLoad(this.gameObject);
+    }
     public void OnArm1(InputAction.CallbackContext context) 
     {
        FireAllWithNum(1, context.ReadValue<float>() > 0.5f); 
