@@ -48,6 +48,7 @@ public class DragDropManager : MonoBehaviour
                     rb.isKinematic = true;
                     damageComponent.isEnemy = false;
                     damageComponent.isDead = false;
+                    damageComponent.currentHealth = damageComponent.health;
                     Vector3 tmp = selectedObject.transform.GetChild(0).transform.position;
                     selectedObject.transform.position = new Vector3(nextWorldPos.x, nextWorldPos.y, selectedObject.transform.position.z);
                     selectedObject.transform.GetChild(0).position = tmp;

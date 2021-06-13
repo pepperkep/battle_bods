@@ -44,6 +44,10 @@ public class LevelManager : MonoBehaviour
             hasWon = allNull;
         }
         if(hasWon)
+        {
             this.nextButton.SetActive(true);
+            Damageable playerDamage = GameObject.Find("Bod").GetComponent<Damageable>();
+            playerDamage.currentHealth = playerDamage.health;
+        }
     }
 }

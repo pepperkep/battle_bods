@@ -11,6 +11,8 @@ public class Weapon : MonoBehaviour
     void Start()
     {
        anim = gameObject.GetComponent<Animator>(); 
+       if(transform.parent == null)
+            transform.parent = GameObject.Find("Bod").transform;
     }
 
     // Update is called once per frame
