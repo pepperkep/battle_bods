@@ -12,5 +12,6 @@ public class Gun : MonoBehaviour
     public void Fire()
     {
         Instantiate(bulletPrefab, shootPoint.transform.position, shootPoint.transform.rotation);
+        JukeBox.Instance().playLaserSound();
     }
 }

@@ -42,6 +42,7 @@ public class Damageable : MonoBehaviour
                     }
                 }
                 Destroy(this.gameObject);
+                JukeBox.Instance().playLoseSound();
             }
         }
     }
@@ -63,6 +64,7 @@ public class Damageable : MonoBehaviour
         if(hurtbox != null && ((hurtbox.damageEnemy && isEnemy) || (hurtbox.damagePlayer && !isEnemy)))
         {
             currentHealth -= hurtbox.damage;
+            JukeBox.Instance().playArmDamageSound();
             if(hurtbox.destroyOnContact)
                 Destroy(hurtbox.gameObject);
         }

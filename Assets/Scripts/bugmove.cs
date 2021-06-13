@@ -46,6 +46,7 @@ public class bugmove : Movement
         while(true)
         {
             float timeToSwitch = Random.Range(minDuration, maxDuration);
+            JukeBox.Instance().playSpiderSound();
             yield return new WaitForSeconds(timeToSwitch);
             Jump();
         }

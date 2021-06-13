@@ -31,8 +31,10 @@ public class LevelManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-       if(enemies.Count == 0)
+       if(enemies.Count == 0){
             hasWon = true;
+            JukeBox.Instance().playWinSound();
+       }
         else
         {
             bool allNull = true;

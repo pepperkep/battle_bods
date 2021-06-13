@@ -20,5 +20,6 @@ public class Weapon : MonoBehaviour
     {
        //anim.SetBool("FireWeapon", context.ReadValue<float>() > 0.5f); 
        anim.SetBool("FireWeapon", value); 
+       JukeBox.Instance().playHammerSound();
     }
 }
