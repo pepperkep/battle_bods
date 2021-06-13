@@ -17,6 +17,7 @@ public class bugmove : Movement
        hopRoutine = Hop(minWaitAmount, maxWaitAmount);
        StartCoroutine(hopRoutine);
        spr = gameObject.GetComponent<SpriteRenderer>();
+       target = GameObject.Find("Bod");
     }
 
     void Update()
