@@ -32,6 +32,15 @@ public class Damageable : MonoBehaviour
                 {
                     Destroy(obj);
                 }
+                for(int i = 0; i < gameObject.transform.childCount; i++)
+                {
+                    GameObject child = transform.GetChild(i).gameObject;
+                    if(child.CompareTag("Arm"))
+                    {
+                        Damageable damageComp = child.GetComponentInChildren<Damageable>();
+                        damageComp.ArmDeath();
+                    }
+                }
                 Destroy(this.gameObject);
             }
         }
