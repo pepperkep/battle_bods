@@ -67,7 +67,7 @@ public class TriggerArms : MonoBehaviour
     {
         foreach (Weapon arm in triggerArms)
         {
-            if(arm.keyNumber == num)
+            if(arm != null && arm.keyNumber == num)
                 arm.OnFire(value);
         }
     }
