@@ -105,8 +105,8 @@ public class JukeBox : MonoBehaviour
     public void playLoseSound()
     {
         loseSound.Play();
-        music.Pause();
-        alternateMusic.Pause();
+        //music.Pause();
+       // alternateMusic.Pause();
     }
 
     public void playSpiderSound()
