@@ -2592,6 +2592,7 @@ MonoBehaviour:
   enemies:
   - {fileID: 1131559680}
   - {fileID: 669339436}
+  nextButton: {fileID: 1736250101}
 --- !u!4 &1531917878
 Transform:
   m_ObjectHideFlags: 0

@@ -6,6 +6,7 @@ public class LevelManager : MonoBehaviour
 {
 
     public List<GameObject> enemies;
+    public GameObject nextButton;
     private bool hasWon;
     private bool gameOver;
 
@@ -16,6 +17,7 @@ public class LevelManager : MonoBehaviour
         {
             enemies[i].SetActive(false);
         }
+        this.nextButton.SetActive(false);
     }
 
     public void StartEnemyPhase()
@@ -29,6 +31,19 @@ public class LevelManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+       if(enemies.Count == 0)
+            hasWon = true;
+        else
+        {
+            bool allNull = true;
+            for(int i = 0; i < enemies.Count; i++)
+            {
+                if(enemies[i] != null)
+                    allNull = false;
+            }
+            hasWon = allNull;
+        }
+        if(hasWon)
+            this.nextButton.SetActive(true);
     }
 }
